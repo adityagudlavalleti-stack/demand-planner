@@ -1,0 +1,17 @@
+{
+  "generated": "2026-04-17",
+  "alerts": [
+    {
+      "level": "warning",
+      "sku": "COF-GND",
+      "name": "Ground Coffee 12oz",
+      "message": "COF-GND \u2014 1.7d of stock remaining. Plan order of 300 from BeanRoute LLC."
+    },
+    {
+      "level": "warning",
+      "sku": "TPPR-2X",
+      "name": "Paper Towels Double Roll 6pk",
+      "message": "TPPR-2X \u2014 2.0d of stock remaining. Plan order of 480 from HomeEssentials."
+    }
+  ]
+}

@@ -2,12 +2,13 @@
 
 // ─── Data Loading ────────────────────────────────────────────────────────────
 async function loadAll() {
-  const [forecast, po, schedule] = await Promise.all([
+  const [forecast, po, schedule, alertsRaw] = await Promise.all([
     fetch('data/forecast.json').then(r => r.json()),
     fetch('data/purchase_orders.json').then(r => r.json()),
     fetch('data/schedule.json').then(r => r.json()),
+    fetch('data/alerts.json').then(r => r.json()).catch(() => ({ alerts: [] })),
   ]);
-  return { forecast, po, schedule };
+  return { forecast, po, schedule, alerts: alertsRaw.alerts || [] };
 }
 
 // ─── Tabs ─────────────────────────────────────────────────────────────────────
@@ -243,10 +244,32 @@ function renderScheduleGrid(data, week) {
   container.innerHTML = html;
 }
 
+// ─── Alert Banner ─────────────────────────────────────────────────────────────
+function buildAlertBanner(alerts) {
+  const banner = document.getElementById('alert-banner');
+  if (!alerts.length) { banner.classList.add('hidden'); return; }
+
+  const urgent  = alerts.filter(a => a.level === 'urgent');
+  const warning = alerts.filter(a => a.level === 'warning');
+
+  let html = '<div class="alert-banner-inner">';
+  if (urgent.length) {
+    html += `<span class="alert-icon alert-urgent">&#9888; ${urgent.length} URGENT</span>`;
+    urgent.forEach(a => { html += `<span class="alert-item alert-urgent-item">${a.message}</span>`; });
+  }
+  if (warning.length) {
+    html += `<span class="alert-icon alert-warn">&#9888; ${warning.length} Order Soon</span>`;
+    warning.forEach(a => { html += `<span class="alert-item alert-warn-item">${a.message}</span>`; });
+  }
+  html += '</div>';
+  banner.innerHTML = html;
+  banner.classList.remove('hidden');
+}
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 (async () => {
   try {
-    const { forecast, po, schedule } = await loadAll();
+    const { forecast, po, schedule, alerts } = await loadAll();
 
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('tab-forecast').classList.remove('hidden');
@@ -254,6 +277,7 @@ function renderScheduleGrid(data, week) {
     document.getElementById('meta-info').textContent =
       `Generated ${forecast.generated}  ·  ${forecast.forecast_start} → ${forecast.forecast_end}`;
 
+    buildAlertBanner(alerts);
     buildForecastTab(forecast);
     buildPOTab(po);
     buildScheduleTab(schedule);

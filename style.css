@@ -46,6 +46,21 @@ header {
 .logo { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; }
 .meta-info { font-size: 12px; color: var(--muted); }
 
+/* Alert banner */
+.alert-banner {
+  background: rgba(239,68,68,.08);
+  border-bottom: 1px solid rgba(239,68,68,.25);
+  padding: 10px 24px;
+  font-size: 13px;
+}
+.alert-banner-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; max-width: 1200px; margin: 0 auto; }
+.alert-icon { font-weight: 700; white-space: nowrap; }
+.alert-urgent { color: var(--red); }
+.alert-warn   { color: var(--yellow); }
+.alert-item   { color: var(--muted); }
+.alert-urgent-item { color: #fca5a5; }
+.alert-warn-item   { color: #fde68a; }
+
 /* Tab bar */
 .tab-bar {
   background: var(--surface);
