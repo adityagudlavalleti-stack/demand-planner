@@ -1,0 +1,1275 @@
+{
+  "generated": "2026-04-17",
+  "employees": [
+    {
+      "id": "E001",
+      "name": "Jordan Lee",
+      "role": "Sales Associate",
+      "weekly_hours": [
+        34,
+        23,
+        23,
+        23
+      ],
+      "total_hours": 103
+    },
+    {
+      "id": "E002",
+      "name": "Casey Torres",
+      "role": "Sales Associate",
+      "weekly_hours": [
+        28,
+        27,
+        27,
+        27
+      ],
+      "total_hours": 109
+    },
+    {
+      "id": "E003",
+      "name": "Morgan Blake",
+      "role": "Lead Associate",
+      "weekly_hours": [
+        31,
+        22,
+        22,
+        22
+      ],
+      "total_hours": 97
+    },
+    {
+      "id": "E004",
+      "name": "Riley Kim",
+      "role": "Part-Time",
+      "weekly_hours": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "total_hours": 64
+    },
+    {
+      "id": "E005",
+      "name": "Alex Nguyen",
+      "role": "Sales Associate",
+      "weekly_hours": [
+        23,
+        22,
+        22,
+        22
+      ],
+      "total_hours": 89
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-04-18",
+      "dow": "Sat",
+      "week": 1,
+      "projected_revenue": 1270.83,
+      "required_staff": 3,
+      "actual_staff": 3,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-19",
+      "dow": "Sun",
+      "week": 1,
+      "projected_revenue": 1245.36,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-20",
+      "dow": "Mon",
+      "week": 1,
+      "projected_revenue": 1052.38,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "dow": "Tue",
+      "week": 1,
+      "projected_revenue": 1025.68,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-22",
+      "dow": "Wed",
+      "week": 1,
+      "projected_revenue": 1054.34,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "dow": "Thu",
+      "week": 1,
+      "projected_revenue": 1050.35,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "dow": "Fri",
+      "week": 1,
+      "projected_revenue": 1043.75,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "dow": "Sat",
+      "week": 2,
+      "projected_revenue": 1225.04,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "dow": "Sun",
+      "week": 2,
+      "projected_revenue": 1200.37,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "dow": "Mon",
+      "week": 2,
+      "projected_revenue": 1013.63,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "dow": "Tue",
+      "week": 2,
+      "projected_revenue": 989.38,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "dow": "Wed",
+      "week": 2,
+      "projected_revenue": 1016.44,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "dow": "Thu",
+      "week": 2,
+      "projected_revenue": 1010.8,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "dow": "Fri",
+      "week": 2,
+      "projected_revenue": 1005.85,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-02",
+      "dow": "Sat",
+      "week": 3,
+      "projected_revenue": 1179.1,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "dow": "Sun",
+      "week": 3,
+      "projected_revenue": 1154.24,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "dow": "Mon",
+      "week": 3,
+      "projected_revenue": 975.28,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-05",
+      "dow": "Tue",
+      "week": 3,
+      "projected_revenue": 951.48,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "dow": "Wed",
+      "week": 3,
+      "projected_revenue": 977.84,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "dow": "Thu",
+      "week": 3,
+      "projected_revenue": 974.3,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "dow": "Fri",
+      "week": 3,
+      "projected_revenue": 966.7,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "dow": "Sat",
+      "week": 4,
+      "projected_revenue": 1131.62,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "dow": "Sun",
+      "week": 4,
+      "projected_revenue": 1109.25,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "dow": "Mon",
+      "week": 4,
+      "projected_revenue": 936.14,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "dow": "Tue",
+      "week": 4,
+      "projected_revenue": 913.28,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "dow": "Wed",
+      "week": 4,
+      "projected_revenue": 938.69,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "dow": "Thu",
+      "week": 4,
+      "projected_revenue": 935.95,
+      "required_staff": 1,
+      "actual_staff": 1,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "dow": "Fri",
+      "week": 4,
+      "projected_revenue": 929.7,
+      "required_staff": 2,
+      "actual_staff": 2,
+      "understaffed": false,
+      "assignments": [
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E005",
+          "employee_name": "Alex Nguyen",
+          "shift": "AM",
+          "hours": 6
+        },
+        {
+          "employee_id": "E001",
+          "employee_name": "Jordan Lee",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E002",
+          "employee_name": "Casey Torres",
+          "shift": "PM",
+          "hours": 5
+        },
+        {
+          "employee_id": "E003",
+          "employee_name": "Morgan Blake",
+          "shift": "OFF",
+          "hours": 0
+        },
+        {
+          "employee_id": "E004",
+          "employee_name": "Riley Kim",
+          "shift": "OFF",
+          "hours": 0
+        }
+      ]
+    }
+  ]
+}

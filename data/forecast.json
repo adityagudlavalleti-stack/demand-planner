@@ -1,0 +1,1189 @@
+{
+  "generated": "2026-04-17",
+  "forecast_start": "2026-04-18",
+  "forecast_end": "2026-05-15",
+  "skus": {
+    "WTR-500": {
+      "name": "Spring Water 500ml 24pk",
+      "category": "Beverages",
+      "sell_price": 8.99,
+      "daily": [
+        {
+          "date": "2026-04-18",
+          "dow": "Sat",
+          "week": 1,
+          "units": 38.1
+        },
+        {
+          "date": "2026-04-19",
+          "dow": "Sun",
+          "week": 1,
+          "units": 38.2
+        },
+        {
+          "date": "2026-04-20",
+          "dow": "Mon",
+          "week": 1,
+          "units": 28.5
+        },
+        {
+          "date": "2026-04-21",
+          "dow": "Tue",
+          "week": 1,
+          "units": 28.6
+        },
+        {
+          "date": "2026-04-22",
+          "dow": "Wed",
+          "week": 1,
+          "units": 28.9
+        },
+        {
+          "date": "2026-04-23",
+          "dow": "Thu",
+          "week": 1,
+          "units": 29.9
+        },
+        {
+          "date": "2026-04-24",
+          "dow": "Fri",
+          "week": 1,
+          "units": 28.6
+        },
+        {
+          "date": "2026-04-25",
+          "dow": "Sat",
+          "week": 2,
+          "units": 37.4
+        },
+        {
+          "date": "2026-04-26",
+          "dow": "Sun",
+          "week": 2,
+          "units": 37.5
+        },
+        {
+          "date": "2026-04-27",
+          "dow": "Mon",
+          "week": 2,
+          "units": 28.0
+        },
+        {
+          "date": "2026-04-28",
+          "dow": "Tue",
+          "week": 2,
+          "units": 28.1
+        },
+        {
+          "date": "2026-04-29",
+          "dow": "Wed",
+          "week": 2,
+          "units": 28.4
+        },
+        {
+          "date": "2026-04-30",
+          "dow": "Thu",
+          "week": 2,
+          "units": 29.4
+        },
+        {
+          "date": "2026-05-01",
+          "dow": "Fri",
+          "week": 2,
+          "units": 28.1
+        },
+        {
+          "date": "2026-05-02",
+          "dow": "Sat",
+          "week": 3,
+          "units": 36.8
+        },
+        {
+          "date": "2026-05-03",
+          "dow": "Sun",
+          "week": 3,
+          "units": 36.9
+        },
+        {
+          "date": "2026-05-04",
+          "dow": "Mon",
+          "week": 3,
+          "units": 27.5
+        },
+        {
+          "date": "2026-05-05",
+          "dow": "Tue",
+          "week": 3,
+          "units": 27.6
+        },
+        {
+          "date": "2026-05-06",
+          "dow": "Wed",
+          "week": 3,
+          "units": 27.9
+        },
+        {
+          "date": "2026-05-07",
+          "dow": "Thu",
+          "week": 3,
+          "units": 28.9
+        },
+        {
+          "date": "2026-05-08",
+          "dow": "Fri",
+          "week": 3,
+          "units": 27.6
+        },
+        {
+          "date": "2026-05-09",
+          "dow": "Sat",
+          "week": 4,
+          "units": 36.1
+        },
+        {
+          "date": "2026-05-10",
+          "dow": "Sun",
+          "week": 4,
+          "units": 36.2
+        },
+        {
+          "date": "2026-05-11",
+          "dow": "Mon",
+          "week": 4,
+          "units": 27.0
+        },
+        {
+          "date": "2026-05-12",
+          "dow": "Tue",
+          "week": 4,
+          "units": 27.1
+        },
+        {
+          "date": "2026-05-13",
+          "dow": "Wed",
+          "week": 4,
+          "units": 27.4
+        },
+        {
+          "date": "2026-05-14",
+          "dow": "Thu",
+          "week": 4,
+          "units": 28.4
+        },
+        {
+          "date": "2026-05-15",
+          "dow": "Fri",
+          "week": 4,
+          "units": 27.2
+        }
+      ],
+      "weekly_summary": [
+        {
+          "week": "Week 1",
+          "units": 220.8,
+          "revenue": 1984.99
+        },
+        {
+          "week": "Week 2",
+          "units": 216.9,
+          "revenue": 1949.93
+        },
+        {
+          "week": "Week 3",
+          "units": 213.2,
+          "revenue": 1916.67
+        },
+        {
+          "week": "Week 4",
+          "units": 209.4,
+          "revenue": 1882.51
+        }
+      ]
+    },
+    "GRN-BAR": {
+      "name": "Granola Bar Mixed 12pk",
+      "category": "Snacks",
+      "sell_price": 12.49,
+      "daily": [
+        {
+          "date": "2026-04-18",
+          "dow": "Sat",
+          "week": 1,
+          "units": 21.1
+        },
+        {
+          "date": "2026-04-19",
+          "dow": "Sun",
+          "week": 1,
+          "units": 19.5
+        },
+        {
+          "date": "2026-04-20",
+          "dow": "Mon",
+          "week": 1,
+          "units": 17.8
+        },
+        {
+          "date": "2026-04-21",
+          "dow": "Tue",
+          "week": 1,
+          "units": 17.8
+        },
+        {
+          "date": "2026-04-22",
+          "dow": "Wed",
+          "week": 1,
+          "units": 18.7
+        },
+        {
+          "date": "2026-04-23",
+          "dow": "Thu",
+          "week": 1,
+          "units": 17.5
+        },
+        {
+          "date": "2026-04-24",
+          "dow": "Fri",
+          "week": 1,
+          "units": 17.7
+        },
+        {
+          "date": "2026-04-25",
+          "dow": "Sat",
+          "week": 2,
+          "units": 20.0
+        },
+        {
+          "date": "2026-04-26",
+          "dow": "Sun",
+          "week": 2,
+          "units": 18.5
+        },
+        {
+          "date": "2026-04-27",
+          "dow": "Mon",
+          "week": 2,
+          "units": 16.9
+        },
+        {
+          "date": "2026-04-28",
+          "dow": "Tue",
+          "week": 2,
+          "units": 16.9
+        },
+        {
+          "date": "2026-04-29",
+          "dow": "Wed",
+          "week": 2,
+          "units": 17.8
+        },
+        {
+          "date": "2026-04-30",
+          "dow": "Thu",
+          "week": 2,
+          "units": 16.6
+        },
+        {
+          "date": "2026-05-01",
+          "dow": "Fri",
+          "week": 2,
+          "units": 16.8
+        },
+        {
+          "date": "2026-05-02",
+          "dow": "Sat",
+          "week": 3,
+          "units": 18.9
+        },
+        {
+          "date": "2026-05-03",
+          "dow": "Sun",
+          "week": 3,
+          "units": 17.4
+        },
+        {
+          "date": "2026-05-04",
+          "dow": "Mon",
+          "week": 3,
+          "units": 16.0
+        },
+        {
+          "date": "2026-05-05",
+          "dow": "Tue",
+          "week": 3,
+          "units": 16.0
+        },
+        {
+          "date": "2026-05-06",
+          "dow": "Wed",
+          "week": 3,
+          "units": 16.8
+        },
+        {
+          "date": "2026-05-07",
+          "dow": "Thu",
+          "week": 3,
+          "units": 15.7
+        },
+        {
+          "date": "2026-05-08",
+          "dow": "Fri",
+          "week": 3,
+          "units": 15.8
+        },
+        {
+          "date": "2026-05-09",
+          "dow": "Sat",
+          "week": 4,
+          "units": 17.7
+        },
+        {
+          "date": "2026-05-10",
+          "dow": "Sun",
+          "week": 4,
+          "units": 16.4
+        },
+        {
+          "date": "2026-05-11",
+          "dow": "Mon",
+          "week": 4,
+          "units": 15.0
+        },
+        {
+          "date": "2026-05-12",
+          "dow": "Tue",
+          "week": 4,
+          "units": 15.0
+        },
+        {
+          "date": "2026-05-13",
+          "dow": "Wed",
+          "week": 4,
+          "units": 15.8
+        },
+        {
+          "date": "2026-05-14",
+          "dow": "Thu",
+          "week": 4,
+          "units": 14.8
+        },
+        {
+          "date": "2026-05-15",
+          "dow": "Fri",
+          "week": 4,
+          "units": 14.9
+        }
+      ],
+      "weekly_summary": [
+        {
+          "week": "Week 1",
+          "units": 130.1,
+          "revenue": 1624.95
+        },
+        {
+          "week": "Week 2",
+          "units": 123.5,
+          "revenue": 1542.51
+        },
+        {
+          "week": "Week 3",
+          "units": 116.6,
+          "revenue": 1456.33
+        },
+        {
+          "week": "Week 4",
+          "units": 109.6,
+          "revenue": 1368.9
+        }
+      ]
+    },
+    "CHPS-BBQ": {
+      "name": "BBQ Chips Family Bag",
+      "category": "Snacks",
+      "sell_price": 3.99,
+      "daily": [
+        {
+          "date": "2026-04-18",
+          "dow": "Sat",
+          "week": 1,
+          "units": 67.7
+        },
+        {
+          "date": "2026-04-19",
+          "dow": "Sun",
+          "week": 1,
+          "units": 65.7
+        },
+        {
+          "date": "2026-04-20",
+          "dow": "Mon",
+          "week": 1,
+          "units": 46.3
+        },
+        {
+          "date": "2026-04-21",
+          "dow": "Tue",
+          "week": 1,
+          "units": 43.4
+        },
+        {
+          "date": "2026-04-22",
+          "dow": "Wed",
+          "week": 1,
+          "units": 45.2
+        },
+        {
+          "date": "2026-04-23",
+          "dow": "Thu",
+          "week": 1,
+          "units": 43.9
+        },
+        {
+          "date": "2026-04-24",
+          "dow": "Fri",
+          "week": 1,
+          "units": 46.0
+        },
+        {
+          "date": "2026-04-25",
+          "dow": "Sat",
+          "week": 2,
+          "units": 65.5
+        },
+        {
+          "date": "2026-04-26",
+          "dow": "Sun",
+          "week": 2,
+          "units": 63.5
+        },
+        {
+          "date": "2026-04-27",
+          "dow": "Mon",
+          "week": 2,
+          "units": 44.7
+        },
+        {
+          "date": "2026-04-28",
+          "dow": "Tue",
+          "week": 2,
+          "units": 42.0
+        },
+        {
+          "date": "2026-04-29",
+          "dow": "Wed",
+          "week": 2,
+          "units": 43.7
+        },
+        {
+          "date": "2026-04-30",
+          "dow": "Thu",
+          "week": 2,
+          "units": 42.4
+        },
+        {
+          "date": "2026-05-01",
+          "dow": "Fri",
+          "week": 2,
+          "units": 44.5
+        },
+        {
+          "date": "2026-05-02",
+          "dow": "Sat",
+          "week": 3,
+          "units": 63.2
+        },
+        {
+          "date": "2026-05-03",
+          "dow": "Sun",
+          "week": 3,
+          "units": 61.4
+        },
+        {
+          "date": "2026-05-04",
+          "dow": "Mon",
+          "week": 3,
+          "units": 43.2
+        },
+        {
+          "date": "2026-05-05",
+          "dow": "Tue",
+          "week": 3,
+          "units": 40.5
+        },
+        {
+          "date": "2026-05-06",
+          "dow": "Wed",
+          "week": 3,
+          "units": 42.2
+        },
+        {
+          "date": "2026-05-07",
+          "dow": "Thu",
+          "week": 3,
+          "units": 41.0
+        },
+        {
+          "date": "2026-05-08",
+          "dow": "Fri",
+          "week": 3,
+          "units": 43.0
+        },
+        {
+          "date": "2026-05-09",
+          "dow": "Sat",
+          "week": 4,
+          "units": 61.0
+        },
+        {
+          "date": "2026-05-10",
+          "dow": "Sun",
+          "week": 4,
+          "units": 59.2
+        },
+        {
+          "date": "2026-05-11",
+          "dow": "Mon",
+          "week": 4,
+          "units": 41.7
+        },
+        {
+          "date": "2026-05-12",
+          "dow": "Tue",
+          "week": 4,
+          "units": 39.1
+        },
+        {
+          "date": "2026-05-13",
+          "dow": "Wed",
+          "week": 4,
+          "units": 40.7
+        },
+        {
+          "date": "2026-05-14",
+          "dow": "Thu",
+          "week": 4,
+          "units": 39.5
+        },
+        {
+          "date": "2026-05-15",
+          "dow": "Fri",
+          "week": 4,
+          "units": 41.5
+        }
+      ],
+      "weekly_summary": [
+        {
+          "week": "Week 1",
+          "units": 358.2,
+          "revenue": 1429.22
+        },
+        {
+          "week": "Week 2",
+          "units": 346.3,
+          "revenue": 1381.74
+        },
+        {
+          "week": "Week 3",
+          "units": 334.5,
+          "revenue": 1334.65
+        },
+        {
+          "week": "Week 4",
+          "units": 322.7,
+          "revenue": 1287.57
+        }
+      ]
+    },
+    "COF-GND": {
+      "name": "Ground Coffee 12oz",
+      "category": "Beverages",
+      "sell_price": 11.99,
+      "daily": [
+        {
+          "date": "2026-04-18",
+          "dow": "Sat",
+          "week": 1,
+          "units": 9.5
+        },
+        {
+          "date": "2026-04-19",
+          "dow": "Sun",
+          "week": 1,
+          "units": 9.3
+        },
+        {
+          "date": "2026-04-20",
+          "dow": "Mon",
+          "week": 1,
+          "units": 11.4
+        },
+        {
+          "date": "2026-04-21",
+          "dow": "Tue",
+          "week": 1,
+          "units": 10.9
+        },
+        {
+          "date": "2026-04-22",
+          "dow": "Wed",
+          "week": 1,
+          "units": 11.5
+        },
+        {
+          "date": "2026-04-23",
+          "dow": "Thu",
+          "week": 1,
+          "units": 12.1
+        },
+        {
+          "date": "2026-04-24",
+          "dow": "Fri",
+          "week": 1,
+          "units": 11.5
+        },
+        {
+          "date": "2026-04-25",
+          "dow": "Sat",
+          "week": 2,
+          "units": 9.3
+        },
+        {
+          "date": "2026-04-26",
+          "dow": "Sun",
+          "week": 2,
+          "units": 9.1
+        },
+        {
+          "date": "2026-04-27",
+          "dow": "Mon",
+          "week": 2,
+          "units": 11.1
+        },
+        {
+          "date": "2026-04-28",
+          "dow": "Tue",
+          "week": 2,
+          "units": 10.7
+        },
+        {
+          "date": "2026-04-29",
+          "dow": "Wed",
+          "week": 2,
+          "units": 11.2
+        },
+        {
+          "date": "2026-04-30",
+          "dow": "Thu",
+          "week": 2,
+          "units": 11.7
+        },
+        {
+          "date": "2026-05-01",
+          "dow": "Fri",
+          "week": 2,
+          "units": 11.2
+        },
+        {
+          "date": "2026-05-02",
+          "dow": "Sat",
+          "week": 3,
+          "units": 9.0
+        },
+        {
+          "date": "2026-05-03",
+          "dow": "Sun",
+          "week": 3,
+          "units": 8.8
+        },
+        {
+          "date": "2026-05-04",
+          "dow": "Mon",
+          "week": 3,
+          "units": 10.8
+        },
+        {
+          "date": "2026-05-05",
+          "dow": "Tue",
+          "week": 3,
+          "units": 10.4
+        },
+        {
+          "date": "2026-05-06",
+          "dow": "Wed",
+          "week": 3,
+          "units": 10.9
+        },
+        {
+          "date": "2026-05-07",
+          "dow": "Thu",
+          "week": 3,
+          "units": 11.4
+        },
+        {
+          "date": "2026-05-08",
+          "dow": "Fri",
+          "week": 3,
+          "units": 10.9
+        },
+        {
+          "date": "2026-05-09",
+          "dow": "Sat",
+          "week": 4,
+          "units": 8.8
+        },
+        {
+          "date": "2026-05-10",
+          "dow": "Sun",
+          "week": 4,
+          "units": 8.6
+        },
+        {
+          "date": "2026-05-11",
+          "dow": "Mon",
+          "week": 4,
+          "units": 10.5
+        },
+        {
+          "date": "2026-05-12",
+          "dow": "Tue",
+          "week": 4,
+          "units": 10.1
+        },
+        {
+          "date": "2026-05-13",
+          "dow": "Wed",
+          "week": 4,
+          "units": 10.6
+        },
+        {
+          "date": "2026-05-14",
+          "dow": "Thu",
+          "week": 4,
+          "units": 11.1
+        },
+        {
+          "date": "2026-05-15",
+          "dow": "Fri",
+          "week": 4,
+          "units": 10.6
+        }
+      ],
+      "weekly_summary": [
+        {
+          "week": "Week 1",
+          "units": 76.2,
+          "revenue": 913.64
+        },
+        {
+          "week": "Week 2",
+          "units": 74.3,
+          "revenue": 890.86
+        },
+        {
+          "week": "Week 3",
+          "units": 72.2,
+          "revenue": 865.68
+        },
+        {
+          "week": "Week 4",
+          "units": 70.3,
+          "revenue": 842.9
+        }
+      ]
+    },
+    "SOAP-LVN": {
+      "name": "Lavender Hand Soap 8oz",
+      "category": "Health & Beauty",
+      "sell_price": 4.49,
+      "daily": [
+        {
+          "date": "2026-04-18",
+          "dow": "Sat",
+          "week": 1,
+          "units": 22.7
+        },
+        {
+          "date": "2026-04-19",
+          "dow": "Sun",
+          "week": 1,
+          "units": 22.7
+        },
+        {
+          "date": "2026-04-20",
+          "dow": "Mon",
+          "week": 1,
+          "units": 22.4
+        },
+        {
+          "date": "2026-04-21",
+          "dow": "Tue",
+          "week": 1,
+          "units": 21.5
+        },
+        {
+          "date": "2026-04-22",
+          "dow": "Wed",
+          "week": 1,
+          "units": 21.8
+        },
+        {
+          "date": "2026-04-23",
+          "dow": "Thu",
+          "week": 1,
+          "units": 21.8
+        },
+        {
+          "date": "2026-04-24",
+          "dow": "Fri",
+          "week": 1,
+          "units": 21.0
+        },
+        {
+          "date": "2026-04-25",
+          "dow": "Sat",
+          "week": 2,
+          "units": 21.9
+        },
+        {
+          "date": "2026-04-26",
+          "dow": "Sun",
+          "week": 2,
+          "units": 21.8
+        },
+        {
+          "date": "2026-04-27",
+          "dow": "Mon",
+          "week": 2,
+          "units": 21.5
+        },
+        {
+          "date": "2026-04-28",
+          "dow": "Tue",
+          "week": 2,
+          "units": 20.7
+        },
+        {
+          "date": "2026-04-29",
+          "dow": "Wed",
+          "week": 2,
+          "units": 21.0
+        },
+        {
+          "date": "2026-04-30",
+          "dow": "Thu",
+          "week": 2,
+          "units": 20.9
+        },
+        {
+          "date": "2026-05-01",
+          "dow": "Fri",
+          "week": 2,
+          "units": 20.2
+        },
+        {
+          "date": "2026-05-02",
+          "dow": "Sat",
+          "week": 3,
+          "units": 21.0
+        },
+        {
+          "date": "2026-05-03",
+          "dow": "Sun",
+          "week": 3,
+          "units": 20.9
+        },
+        {
+          "date": "2026-05-04",
+          "dow": "Mon",
+          "week": 3,
+          "units": 20.6
+        },
+        {
+          "date": "2026-05-05",
+          "dow": "Tue",
+          "week": 3,
+          "units": 19.9
+        },
+        {
+          "date": "2026-05-06",
+          "dow": "Wed",
+          "week": 3,
+          "units": 20.1
+        },
+        {
+          "date": "2026-05-07",
+          "dow": "Thu",
+          "week": 3,
+          "units": 20.1
+        },
+        {
+          "date": "2026-05-08",
+          "dow": "Fri",
+          "week": 3,
+          "units": 19.4
+        },
+        {
+          "date": "2026-05-09",
+          "dow": "Sat",
+          "week": 4,
+          "units": 20.1
+        },
+        {
+          "date": "2026-05-10",
+          "dow": "Sun",
+          "week": 4,
+          "units": 20.0
+        },
+        {
+          "date": "2026-05-11",
+          "dow": "Mon",
+          "week": 4,
+          "units": 19.8
+        },
+        {
+          "date": "2026-05-12",
+          "dow": "Tue",
+          "week": 4,
+          "units": 19.0
+        },
+        {
+          "date": "2026-05-13",
+          "dow": "Wed",
+          "week": 4,
+          "units": 19.3
+        },
+        {
+          "date": "2026-05-14",
+          "dow": "Thu",
+          "week": 4,
+          "units": 19.2
+        },
+        {
+          "date": "2026-05-15",
+          "dow": "Fri",
+          "week": 4,
+          "units": 18.6
+        }
+      ],
+      "weekly_summary": [
+        {
+          "week": "Week 1",
+          "units": 153.9,
+          "revenue": 691.01
+        },
+        {
+          "week": "Week 2",
+          "units": 148.0,
+          "revenue": 664.52
+        },
+        {
+          "week": "Week 3",
+          "units": 142.0,
+          "revenue": 637.58
+        },
+        {
+          "week": "Week 4",
+          "units": 136.0,
+          "revenue": 610.64
+        }
+      ]
+    },
+    "TPPR-2X": {
+      "name": "Paper Towels Double Roll 6pk",
+      "category": "Household",
+      "sell_price": 9.99,
+      "daily": [
+        {
+          "date": "2026-04-18",
+          "dow": "Sat",
+          "week": 1,
+          "units": 17.9
+        },
+        {
+          "date": "2026-04-19",
+          "dow": "Sun",
+          "week": 1,
+          "units": 18.3
+        },
+        {
+          "date": "2026-04-20",
+          "dow": "Mon",
+          "week": 1,
+          "units": 15.2
+        },
+        {
+          "date": "2026-04-21",
+          "dow": "Tue",
+          "week": 1,
+          "units": 14.6
+        },
+        {
+          "date": "2026-04-22",
+          "dow": "Wed",
+          "week": 1,
+          "units": 14.5
+        },
+        {
+          "date": "2026-04-23",
+          "dow": "Thu",
+          "week": 1,
+          "units": 14.5
+        },
+        {
+          "date": "2026-04-24",
+          "dow": "Fri",
+          "week": 1,
+          "units": 15.0
+        },
+        {
+          "date": "2026-04-25",
+          "dow": "Sat",
+          "week": 2,
+          "units": 16.8
+        },
+        {
+          "date": "2026-04-26",
+          "dow": "Sun",
+          "week": 2,
+          "units": 17.2
+        },
+        {
+          "date": "2026-04-27",
+          "dow": "Mon",
+          "week": 2,
+          "units": 14.3
+        },
+        {
+          "date": "2026-04-28",
+          "dow": "Tue",
+          "week": 2,
+          "units": 13.7
+        },
+        {
+          "date": "2026-04-29",
+          "dow": "Wed",
+          "week": 2,
+          "units": 13.6
+        },
+        {
+          "date": "2026-04-30",
+          "dow": "Thu",
+          "week": 2,
+          "units": 13.6
+        },
+        {
+          "date": "2026-05-01",
+          "dow": "Fri",
+          "week": 2,
+          "units": 14.1
+        },
+        {
+          "date": "2026-05-02",
+          "dow": "Sat",
+          "week": 3,
+          "units": 15.8
+        },
+        {
+          "date": "2026-05-03",
+          "dow": "Sun",
+          "week": 3,
+          "units": 16.1
+        },
+        {
+          "date": "2026-05-04",
+          "dow": "Mon",
+          "week": 3,
+          "units": 13.4
+        },
+        {
+          "date": "2026-05-05",
+          "dow": "Tue",
+          "week": 3,
+          "units": 12.8
+        },
+        {
+          "date": "2026-05-06",
+          "dow": "Wed",
+          "week": 3,
+          "units": 12.8
+        },
+        {
+          "date": "2026-05-07",
+          "dow": "Thu",
+          "week": 3,
+          "units": 12.8
+        },
+        {
+          "date": "2026-05-08",
+          "dow": "Fri",
+          "week": 3,
+          "units": 13.2
+        },
+        {
+          "date": "2026-05-09",
+          "dow": "Sat",
+          "week": 4,
+          "units": 14.7
+        },
+        {
+          "date": "2026-05-10",
+          "dow": "Sun",
+          "week": 4,
+          "units": 15.0
+        },
+        {
+          "date": "2026-05-11",
+          "dow": "Mon",
+          "week": 4,
+          "units": 12.5
+        },
+        {
+          "date": "2026-05-12",
+          "dow": "Tue",
+          "week": 4,
+          "units": 12.0
+        },
+        {
+          "date": "2026-05-13",
+          "dow": "Wed",
+          "week": 4,
+          "units": 11.9
+        },
+        {
+          "date": "2026-05-14",
+          "dow": "Thu",
+          "week": 4,
+          "units": 11.9
+        },
+        {
+          "date": "2026-05-15",
+          "dow": "Fri",
+          "week": 4,
+          "units": 12.3
+        }
+      ],
+      "weekly_summary": [
+        {
+          "week": "Week 1",
+          "units": 110.0,
+          "revenue": 1098.9
+        },
+        {
+          "week": "Week 2",
+          "units": 103.3,
+          "revenue": 1031.97
+        },
+        {
+          "week": "Week 3",
+          "units": 96.9,
+          "revenue": 968.03
+        },
+        {
+          "week": "Week 4",
+          "units": 90.3,
+          "revenue": 902.1
+        }
+      ]
+    }
+  }
+}

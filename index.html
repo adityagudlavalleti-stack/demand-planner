@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demand Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#2563eb"/>
+          <path d="M7 20L11 13L15 16L19 9L21 12" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Demand Planner</span>
+      </div>
+      <div id="meta-info" class="meta-info"></div>
+    </div>
+  </header>
+
+  <nav class="tab-bar">
+    <button class="tab active" data-tab="forecast">Forecast</button>
+    <button class="tab" data-tab="purchase-orders">Purchase Orders</button>
+    <button class="tab" data-tab="schedule">Schedule</button>
+  </nav>
+
+  <main id="app">
+    <div id="loading" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading data…</p>
+    </div>
+
+    <!-- FORECAST TAB -->
+    <section id="tab-forecast" class="tab-content hidden">
+      <div class="section-header">
+        <h2>4-Week Sales Forecast</h2>
+        <div class="sku-filter" id="sku-filter"></div>
+      </div>
+      <div class="card">
+        <canvas id="forecast-chart" height="100"></canvas>
+      </div>
+      <div class="card mt-16">
+        <h3>Weekly Summary by SKU</h3>
+        <div class="table-wrap">
+          <table id="forecast-table" class="data-table">
+            <thead>
+              <tr>
+                <th>SKU</th><th>Product</th>
+                <th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th>
+                <th>4-Wk Revenue</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PURCHASE ORDERS TAB -->
+    <section id="tab-purchase-orders" class="tab-content hidden">
+      <div class="section-header">
+        <h2>Purchase Orders</h2>
+        <div class="po-summary" id="po-summary"></div>
+      </div>
+      <div class="card">
+        <div class="table-wrap">
+          <table id="po-table" class="data-table">
+            <thead>
+              <tr>
+                <th>Status</th><th>SKU</th><th>Product</th><th>Supplier</th>
+                <th>In Stock</th><th>4-Wk Demand</th><th>Days Left</th>
+                <th>Order Qty</th><th>Est. Cost</th><th>Order By</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE TAB -->
+    <section id="tab-schedule" class="tab-content hidden">
+      <div class="section-header">
+        <h2>Employee Schedule</h2>
+        <div class="week-nav" id="week-nav"></div>
+      </div>
+      <div id="schedule-understaffed" class="alert hidden"></div>
+      <div class="card">
+        <div id="schedule-grid"></div>
+      </div>
+      <div class="card mt-16">
+        <h3>Weekly Hours Summary</h3>
+        <div class="table-wrap">
+          <table id="hours-table" class="data-table">
+            <thead>
+              <tr><th>Employee</th><th>Role</th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th><th>Total</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
