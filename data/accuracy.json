@@ -1,0 +1,208 @@
+{
+  "generated": "2026-04-17",
+  "overall_mape": null,
+  "health_badge": "NO DATA",
+  "weeks_tracked": false,
+  "sku_summary": {
+    "WTR-500": {
+      "weeks_tracked": 0,
+      "mape": null,
+      "needs_calibration": false
+    },
+    "GRN-BAR": {
+      "weeks_tracked": 0,
+      "mape": null,
+      "needs_calibration": false
+    },
+    "CHPS-BBQ": {
+      "weeks_tracked": 0,
+      "mape": null,
+      "needs_calibration": false
+    },
+    "COF-GND": {
+      "weeks_tracked": 0,
+      "mape": null,
+      "needs_calibration": false
+    },
+    "SOAP-LVN": {
+      "weeks_tracked": 0,
+      "mape": null,
+      "needs_calibration": false
+    },
+    "TPPR-2X": {
+      "weeks_tracked": 0,
+      "mape": null,
+      "needs_calibration": false
+    }
+  },
+  "weeks": [
+    {
+      "week_start": "2026-04-18",
+      "week_label": "Week 1",
+      "skus": {
+        "WTR-500": {
+          "forecast_units": 220.8,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "GRN-BAR": {
+          "forecast_units": 130.1,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "CHPS-BBQ": {
+          "forecast_units": 358.2,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "COF-GND": {
+          "forecast_units": 76.2,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "SOAP-LVN": {
+          "forecast_units": 153.9,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "TPPR-2X": {
+          "forecast_units": 110.0,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        }
+      }
+    },
+    {
+      "week_start": "2026-04-25",
+      "week_label": "Week 2",
+      "skus": {
+        "WTR-500": {
+          "forecast_units": 216.9,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "GRN-BAR": {
+          "forecast_units": 123.5,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "CHPS-BBQ": {
+          "forecast_units": 346.3,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "COF-GND": {
+          "forecast_units": 74.3,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "SOAP-LVN": {
+          "forecast_units": 148.0,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "TPPR-2X": {
+          "forecast_units": 103.3,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        }
+      }
+    },
+    {
+      "week_start": "2026-05-02",
+      "week_label": "Week 3",
+      "skus": {
+        "WTR-500": {
+          "forecast_units": 213.2,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "GRN-BAR": {
+          "forecast_units": 116.6,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "CHPS-BBQ": {
+          "forecast_units": 334.5,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "COF-GND": {
+          "forecast_units": 72.2,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "SOAP-LVN": {
+          "forecast_units": 142.0,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "TPPR-2X": {
+          "forecast_units": 96.9,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        }
+      }
+    },
+    {
+      "week_start": "2026-05-09",
+      "week_label": "Week 4",
+      "skus": {
+        "WTR-500": {
+          "forecast_units": 209.4,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "GRN-BAR": {
+          "forecast_units": 109.6,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "CHPS-BBQ": {
+          "forecast_units": 322.7,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "COF-GND": {
+          "forecast_units": 70.3,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "SOAP-LVN": {
+          "forecast_units": 136.0,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        },
+        "TPPR-2X": {
+          "forecast_units": 90.3,
+          "actual_units": null,
+          "ape": null,
+          "has_actual": false
+        }
+      }
+    }
+  ]
+}

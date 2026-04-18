@@ -2,13 +2,14 @@
 
 // ─── Data Loading ────────────────────────────────────────────────────────────
 async function loadAll() {
-  const [forecast, po, schedule, alertsRaw] = await Promise.all([
+  const [forecast, po, schedule, alertsRaw, accuracy] = await Promise.all([
     fetch('data/forecast.json').then(r => r.json()),
     fetch('data/purchase_orders.json').then(r => r.json()),
     fetch('data/schedule.json').then(r => r.json()),
     fetch('data/alerts.json').then(r => r.json()).catch(() => ({ alerts: [] })),
+    fetch('data/accuracy.json').then(r => r.json()).catch(() => null),
   ]);
-  return { forecast, po, schedule, alerts: alertsRaw.alerts || [] };
+  return { forecast, po, schedule, alerts: alertsRaw.alerts || [], accuracy };
 }
 
 // ─── Tabs ─────────────────────────────────────────────────────────────────────
@@ -23,11 +24,24 @@ document.querySelectorAll('.tab').forEach(btn => {
 
 // ─── Forecast Tab ─────────────────────────────────────────────────────────────
 let forecastChart = null;
+let _accuracy = null;  // module-level so updateChart can access it
 const PALETTE = ['#3b82f6','#22c55e','#f59e0b','#ec4899','#8b5cf6','#06b6d4'];
 
-function buildForecastTab(data) {
+function buildForecastTab(data, accuracy) {
+  _accuracy = accuracy;
   const skus = Object.keys(data.skus);
   let activeSku = skus[0];
+
+  // Model health badge
+  const headerEl = document.querySelector('#tab-forecast .section-header');
+  if (accuracy && accuracy.health_badge !== 'NO DATA') {
+    const badgeClass = { GOOD: 'badge-green', FAIR: 'badge-yellow', POOR: 'badge-red' }[accuracy.health_badge] || 'badge-blue';
+    const mapeStr = accuracy.overall_mape != null ? `MAPE ${accuracy.overall_mape.toFixed(1)}%` : '';
+    const wrap = document.createElement('div');
+    wrap.className = 'health-badge-wrap';
+    wrap.innerHTML = `<span class="badge ${badgeClass}">Model: ${accuracy.health_badge}</span><span style="color:var(--muted);font-size:12px">${mapeStr}</span>`;
+    headerEl.appendChild(wrap);
+  }
 
   // SKU filter buttons
   const filterEl = document.getElementById('sku-filter');
@@ -39,7 +53,7 @@ function buildForecastTab(data) {
       document.querySelectorAll('.sku-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeSku = sku;
-      updateChart(data, activeSku);
+      updateChart(data, activeSku, _accuracy);
     });
     filterEl.appendChild(btn);
   });
@@ -51,25 +65,14 @@ function buildForecastTab(data) {
     return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
   });
 
+  const initDatasets = buildDatasets(data, skus[0], accuracy, PALETTE[0]);
   forecastChart = new Chart(ctx, {
     type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        label: data.skus[skus[0]].name,
-        data: data.skus[skus[0]].daily.map(d => d.units),
-        borderColor: PALETTE[0],
-        backgroundColor: PALETTE[0] + '22',
-        fill: true,
-        tension: 0.35,
-        pointRadius: 2,
-        borderWidth: 2,
-      }]
-    },
+    data: { labels, datasets: initDatasets },
     options: {
       responsive: true,
       plugins: {
-        legend: { display: false },
+        legend: { display: initDatasets.length > 1, labels: { color: '#94a3b8', boxWidth: 14 } },
         tooltip: { mode: 'index', intersect: false }
       },
       scales: {
@@ -84,30 +87,104 @@ function buildForecastTab(data) {
   const tbody = document.querySelector('#forecast-table tbody');
   skus.forEach((sku, si) => {
     const d = data.skus[sku];
-    const tr = document.createElement('tr');
     const totalRev = d.weekly_summary.reduce((a, w) => a + w.revenue, 0);
+    const skuAcc = accuracy && accuracy.sku_summary && accuracy.sku_summary[sku];
+
+    // Actuals cell: show per-week actual if available
+    let actualsHtml = '<span style="color:var(--muted)">—</span>';
+    if (accuracy && accuracy.weeks) {
+      const weekActuals = accuracy.weeks.map(wk => {
+        const sd = wk.skus[sku];
+        return sd && sd.has_actual ? sd.actual_units : null;
+      });
+      if (weekActuals.some(v => v !== null)) {
+        actualsHtml = weekActuals.map(v => v != null ? v : '—').join(' / ');
+      }
+    }
+
+    // Accuracy cell
+    let accHtml = '<span style="color:var(--muted)">—</span>';
+    if (skuAcc && skuAcc.mape != null) {
+      const color = skuAcc.mape <= 10 ? 'var(--green)' : skuAcc.mape <= 20 ? 'var(--yellow)' : 'var(--red)';
+      const cal = skuAcc.needs_calibration ? ' <span class="badge badge-yellow" style="font-size:10px">Tuning</span>' : '';
+      accHtml = `<span style="color:${color};font-weight:600">${skuAcc.mape.toFixed(1)}%</span>${cal}`;
+    }
+
+    const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><span style="color:${PALETTE[si % PALETTE.length]};font-weight:700">${sku}</span></td>
       <td>${d.name}</td>
       ${d.weekly_summary.map(w => `<td>${w.units} u · $${w.revenue.toLocaleString()}</td>`).join('')}
       <td><strong>$${totalRev.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}</strong></td>
+      <td style="font-size:12px;color:var(--muted)">${actualsHtml}</td>
+      <td>${accHtml}</td>
     `;
     tbody.appendChild(tr);
   });
 }
 
-function updateChart(data, sku) {
+function buildDatasets(data, sku, accuracy, color) {
   const d = data.skus[sku];
-  forecastChart.data.datasets[0].label = d.name;
-  forecastChart.data.datasets[0].data  = d.daily.map(x => x.units);
-  forecastChart.data.datasets[0].borderColor = PALETTE[Object.keys(data.skus).indexOf(sku) % PALETTE.length];
-  forecastChart.data.datasets[0].backgroundColor = PALETTE[Object.keys(data.skus).indexOf(sku) % PALETTE.length] + '22';
+  const datasets = [{
+    label: d.name + ' (Forecast)',
+    data: d.daily.map(x => x.units),
+    borderColor: color,
+    backgroundColor: color + '22',
+    fill: true,
+    tension: 0.35,
+    pointRadius: 2,
+    borderWidth: 2,
+    borderDash: [],
+  }];
+
+  if (accuracy && accuracy.weeks) {
+    const actualPoints = buildActualDailyPoints(data, sku, accuracy);
+    if (actualPoints.some(v => v !== null)) {
+      datasets.push({
+        label: d.name + ' (Actual)',
+        data: actualPoints,
+        borderColor: '#f97316',
+        backgroundColor: 'transparent',
+        fill: false,
+        tension: 0.2,
+        pointRadius: 4,
+        borderWidth: 2.5,
+        borderDash: [4, 3],
+        spanGaps: false,
+      });
+    }
+  }
+  return datasets;
+}
+
+function buildActualDailyPoints(data, sku, accuracy) {
+  // Spread weekly actual totals evenly across 7 days for chart overlay
+  const weekActuals = {};
+  (accuracy.weeks || []).forEach(week => {
+    const skuData = week.skus[sku];
+    if (skuData && skuData.has_actual && skuData.actual_units != null) {
+      const start = new Date(week.week_start + 'T00:00:00');
+      const daily = skuData.actual_units / 7;
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(start);
+        d.setDate(d.getDate() + i);
+        weekActuals[d.toISOString().slice(0, 10)] = daily;
+      }
+    }
+  });
+  return data.skus[sku].daily.map(pt => weekActuals[pt.date] !== undefined ? weekActuals[pt.date] : null);
+}
+
+function updateChart(data, sku, accuracy) {
+  const color = PALETTE[Object.keys(data.skus).indexOf(sku) % PALETTE.length];
+  const datasets = buildDatasets(data, sku, accuracy, color);
+  forecastChart.data.datasets = datasets;
+  forecastChart.options.plugins.legend.display = datasets.length > 1;
   forecastChart.update();
 }
 
 // ─── Purchase Orders Tab ──────────────────────────────────────────────────────
 function buildPOTab(data) {
-  // Summary bar
   const urgent = data.orders.filter(o => o.urgency === 'URGENT').length;
   const soon   = data.orders.filter(o => o.urgency === 'ORDER SOON').length;
   document.getElementById('po-summary').innerHTML = `
@@ -157,7 +234,6 @@ function buildPOTab(data) {
 function buildScheduleTab(data) {
   let activeWeek = 1;
 
-  // Week nav buttons
   const navEl = document.getElementById('week-nav');
   [1,2,3,4].forEach(w => {
     const btn = document.createElement('button');
@@ -172,7 +248,6 @@ function buildScheduleTab(data) {
     navEl.appendChild(btn);
   });
 
-  // Hours table
   const tbody = document.querySelector('#hours-table tbody');
   data.employees.forEach(e => {
     const tr = document.createElement('tr');
@@ -187,11 +262,10 @@ function buildScheduleTab(data) {
 
   renderScheduleGrid(data, 1);
 
-  // Understaffed alert
   const badDays = data.days.filter(d => d.understaffed);
   if (badDays.length) {
     const el = document.getElementById('schedule-understaffed');
-    el.textContent = `⚠ ${badDays.length} understaffed day(s): ${badDays.map(d => d.date).join(', ')}`;
+    el.textContent = `\u26a0 ${badDays.length} understaffed day(s): ${badDays.map(d => d.date).join(', ')}`;
     el.classList.remove('hidden');
   }
 }
@@ -201,7 +275,6 @@ function renderScheduleGrid(data, week) {
   const employees = data.employees;
   const container = document.getElementById('schedule-grid');
 
-  // Build assignment lookup: date → emp_id → shift(s)
   const lookup = {};
   days.forEach(day => {
     lookup[day.date] = {};
@@ -266,21 +339,170 @@ function buildAlertBanner(alerts) {
   banner.classList.remove('hidden');
 }
 
+// ─── Log Sales Tab ────────────────────────────────────────────────────────────
+const LS_KEY = 'dp_sales_log';
+
+function lsLoad() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY) || '[]'); }
+  catch { return []; }
+}
+function lsSave(arr) { localStorage.setItem(LS_KEY, JSON.stringify(arr)); }
+
+function buildLogTab(forecast) {
+  const skus = Object.keys(forecast.skus);
+
+  // Build SKU input rows
+  const formSkus = document.getElementById('log-form-skus');
+  skus.forEach(sku => {
+    const row = document.createElement('div');
+    row.className = 'log-sku-row';
+    row.innerHTML = `
+      <span class="log-sku-label">${sku}</span>
+      <span class="log-sku-name">${forecast.skus[sku].name}</span>
+      <input type="number" class="log-sku-input" id="log-input-${sku}"
+             min="0" step="1" value="0" data-sku="${sku}" />
+    `;
+    formSkus.appendChild(row);
+  });
+
+  // Build log table headers — insert SKU columns before last two (Total, delete)
+  const logThead = document.getElementById('log-table-head');
+  const totalTh = logThead.children[1]; // "Total Units" th
+  skus.forEach(sku => {
+    const th = document.createElement('th');
+    th.textContent = sku;
+    logThead.insertBefore(th, totalTh);
+  });
+
+  // Default date to today
+  document.getElementById('log-date').value = new Date().toISOString().slice(0, 10);
+
+  // Quick-fill today
+  document.getElementById('btn-quick-today').addEventListener('click', () => {
+    document.getElementById('log-date').value = new Date().toISOString().slice(0, 10);
+  });
+
+  // Save entry
+  document.getElementById('btn-save-entry').addEventListener('click', () => {
+    const logDate = document.getElementById('log-date').value;
+    if (!logDate) { showLogFeedback('Please select a date.', false); return; }
+    const entries = {};
+    skus.forEach(sku => {
+      entries[sku] = parseInt(document.getElementById('log-input-' + sku).value, 10) || 0;
+    });
+    const arr = lsLoad();
+    arr.push({ id: Date.now().toString(), date: logDate, entries });
+    lsSave(arr);
+    skus.forEach(sku => { document.getElementById('log-input-' + sku).value = 0; });
+    showLogFeedback('Saved.', true);
+    renderLogTable(skus);
+    updateLogBadge();
+  });
+
+  // Export CSV
+  document.getElementById('btn-export-csv').addEventListener('click', () => exportLogCSV(skus));
+
+  renderLogTable(skus);
+  updateLogBadge();
+}
+
+function renderLogTable(skus) {
+  const arr = lsLoad();
+  const tbody = document.querySelector('#log-table tbody');
+  tbody.innerHTML = '';
+
+  const sorted = [...arr].sort((a, b) => b.date.localeCompare(a.date));
+  sorted.forEach(entry => {
+    const tr = document.createElement('tr');
+    const total = skus.reduce((s, sku) => s + (entry.entries[sku] || 0), 0);
+    const skuCells = skus.map(sku => `<td>${entry.entries[sku] || 0}</td>`).join('');
+    tr.innerHTML = `
+      <td>${entry.date}</td>
+      ${skuCells}
+      <td><strong>${total}</strong></td>
+      <td><button class="btn-delete-log" data-id="${entry.id}" title="Delete">&times;</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.querySelectorAll('.btn-delete-log').forEach(btn => {
+    btn.addEventListener('click', () => {
+      lsSave(lsLoad().filter(e => e.id !== btn.dataset.id));
+      renderLogTable(skus);
+      updateLogBadge();
+    });
+  });
+
+  document.getElementById('log-entries-count').textContent = arr.length;
+}
+
+function updateLogBadge() {
+  const count = lsLoad().length;
+  const badge = document.getElementById('log-count-badge');
+  if (count > 0) {
+    badge.textContent = count;
+    badge.classList.remove('hidden');
+  } else {
+    badge.classList.add('hidden');
+  }
+}
+
+function showLogFeedback(msg, ok) {
+  const el = document.getElementById('log-save-feedback');
+  el.textContent = msg;
+  el.style.color = ok ? 'var(--green)' : 'var(--red)';
+  el.classList.remove('hidden');
+  setTimeout(() => el.classList.add('hidden'), 2500);
+}
+
+function exportLogCSV(skus) {
+  const arr = lsLoad();
+  if (!arr.length) { alert('No entries to export.'); return; }
+
+  // Aggregate (date, sku) -> sum, skip zeros
+  const agg = {};
+  arr.forEach(entry => {
+    skus.forEach(sku => {
+      const units = entry.entries[sku] || 0;
+      if (units > 0) {
+        const key = entry.date + '|' + sku;
+        agg[key] = (agg[key] || 0) + units;
+      }
+    });
+  });
+
+  const rows = Object.entries(agg).sort(([a], [b]) => a.localeCompare(b));
+  let csv = 'date,sku,units\n';
+  rows.forEach(([key, units]) => {
+    const [d, sku] = key.split('|');
+    csv += `${d},${sku},${units}\n`;
+  });
+
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = `sales_log_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 (async () => {
   try {
-    const { forecast, po, schedule, alerts } = await loadAll();
+    const { forecast, po, schedule, alerts, accuracy } = await loadAll();
 
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('tab-forecast').classList.remove('hidden');
 
     document.getElementById('meta-info').textContent =
-      `Generated ${forecast.generated}  ·  ${forecast.forecast_start} → ${forecast.forecast_end}`;
+      `Generated ${forecast.generated}  \u00b7  ${forecast.forecast_start} \u2192 ${forecast.forecast_end}`;
 
     buildAlertBanner(alerts);
-    buildForecastTab(forecast);
+    buildForecastTab(forecast, accuracy);
     buildPOTab(po);
     buildScheduleTab(schedule);
+    buildLogTab(forecast);
   } catch (err) {
     document.getElementById('loading').innerHTML =
       `<p style="color:var(--red)">Failed to load data: ${err.message}</p>

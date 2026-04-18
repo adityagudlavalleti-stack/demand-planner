@@ -27,6 +27,7 @@
     <button class="tab active" data-tab="forecast">Forecast</button>
     <button class="tab" data-tab="purchase-orders">Purchase Orders</button>
     <button class="tab" data-tab="schedule">Schedule</button>
+    <button class="tab" data-tab="log-sales">Log Sales <span id="log-count-badge" class="tab-badge hidden">0</span></button>
   </nav>
 
   <main id="app">
@@ -52,7 +53,7 @@
               <tr>
                 <th>SKU</th><th>Product</th>
                 <th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th>
-                <th>4-Wk Revenue</th>
+                <th>4-Wk Revenue</th><th>Actuals</th><th>Accuracy</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -100,6 +101,39 @@
             <thead>
               <tr><th>Employee</th><th>Role</th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th><th>Total</th></tr>
             </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- LOG SALES TAB -->
+    <section id="tab-log-sales" class="tab-content hidden">
+      <div class="section-header">
+        <h2>Log Sales</h2>
+        <div class="log-actions">
+          <button id="btn-quick-today" class="btn-secondary">Quick-fill Today</button>
+          <button id="btn-export-csv" class="btn-primary">Export CSV</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>New Entry</h3>
+        <div class="log-form">
+          <div class="log-form-date">
+            <label for="log-date">Date</label>
+            <input type="date" id="log-date" />
+          </div>
+          <div class="log-form-skus" id="log-form-skus"></div>
+          <div class="log-form-footer">
+            <button id="btn-save-entry" class="btn-primary">Save Entry</button>
+            <span id="log-save-feedback" class="log-feedback hidden"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-16">
+        <h3>Logged Entries <span id="log-entries-count" class="badge badge-blue">0</span></h3>
+        <div class="table-wrap">
+          <table id="log-table" class="data-table">
+            <thead><tr id="log-table-head"><th>Date</th><th>Total Units</th><th></th></tr></thead>
             <tbody></tbody>
           </table>
         </div>
